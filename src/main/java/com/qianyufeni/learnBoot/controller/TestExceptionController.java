@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 
@@ -22,7 +23,7 @@ public class TestExceptionController {
     private TestExceptionService testExceptionService;
 
     @GetMapping("/")
-    public void test(HttpServletResponse response){
+    public void test(HttpServletRequest request,HttpServletResponse response){
         logger.info("MyThreadLocal.getMessage()="+MyThreadLocal.getMessage());
         //通过每次请求获取的线程id不同,表名每次请求都是不同的线程,每次请求都会新分配一个线程调用service方法
         logger.info("当前线程="+Thread.currentThread().getId());

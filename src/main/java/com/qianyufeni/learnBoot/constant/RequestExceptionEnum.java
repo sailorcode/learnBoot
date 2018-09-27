@@ -4,7 +4,7 @@ package com.qianyufeni.learnBoot.constant;
  * 自定义异常码和异常信息
  */
 public enum RequestExceptionEnum {
-    Base("1001","服务器内部错误"),
+    BASE("1001","服务器内部错误"),
     USER_NOT_FOUND("2001","用户不存在");
     private String code;
     private String message;

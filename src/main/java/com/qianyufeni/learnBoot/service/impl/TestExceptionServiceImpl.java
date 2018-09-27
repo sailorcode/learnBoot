@@ -10,6 +10,6 @@ public class TestExceptionServiceImpl implements TestExceptionService {
     @Override
     public void throwExceptionTest() {
         //经测试,service层的异常如果未捕获也会进"/error"请求
-        throw new BadRequestException(RequestExceptionEnum.base.getCode(),RequestExceptionEnum.base.getMessage());
+        throw new BadRequestException(RequestExceptionEnum.BASE.getCode(),RequestExceptionEnum.BASE.getMessage());
     }
 }
