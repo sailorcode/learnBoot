@@ -5,7 +5,8 @@ package com.qianyufeni.learnBoot.constant;
  */
 public enum RequestExceptionEnum {
     BASE("1001","服务器内部错误"),
-    USER_NOT_FOUND("2001","用户不存在");
+    USER_NOT_FOUND("2001","用户不存在"),
+    UESER_PASSWORD_WRONG("2002","密码错误");
     private String code;
     private String message;
 
