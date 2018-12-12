@@ -10,6 +10,7 @@ public class LamabdaTest {
         System.out.println(a);
         new File("").listFiles();
         //new ArrayList<String>().stream().map();
+		develop System.out.println(a);
     }
  @FunctionalInterface
     interface handler<T>{
