@@ -16,13 +16,12 @@ import javax.servlet.http.HttpServletResponse;
 
 
 @RestController
-@RequestMapping("/exception")
 public class TestExceptionController {
     private final static Logger logger = LoggerFactory.getLogger(TestExceptionController.class);
     @Autowired
     private TestExceptionService testExceptionService;
 
-    @GetMapping("/")
+    @GetMapping("/exception/")
     public void test(HttpServletRequest request,HttpServletResponse response){
         logger.info("MyThreadLocal.getMessage()="+MyThreadLocal.getMessage());
         //通过每次请求获取的线程id不同,表名每次请求都是不同的线程,每次请求都会新分配一个线程调用service方法
@@ -30,9 +29,9 @@ public class TestExceptionController {
         MyThreadLocal.setMessage("第一个值");
         //ThreadLocal可以存储同一个线程的共享变量,
         logger.info("MyThreadLocal.getMessage()="+MyThreadLocal.getMessage());
-        testExceptionService.throwExceptionTest();
-        /*if(true){
-            throw new BadRequestException(RequestExceptionEnum.base.getCode(),RequestExceptionEnum.base.getMessage());
-        }*/
+        //testExceptionService.throwExceptionTest();
+        if(true){
+            throw new BadRequestException(RequestExceptionEnum.BASE.getCode(),RequestExceptionEnum.BASE.getMessage());
+        }
     }
 }
