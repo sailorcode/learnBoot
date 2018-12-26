@@ -34,6 +34,17 @@
 			<artifactId>spring-boot-starter-web</artifactId>
 		</dependency>
 
+		<dependency>
+			<groupId>org.projectlombok</groupId>
+			<artifactId>lombok</artifactId>
+			<optional>true</optional>
+		</dependency>
+		<dependency>
+			<groupId>com.baomidou</groupId>
+			<artifactId>mybatis-plus-boot-starter</artifactId>
+			<version>3.0.6</version>
+		</dependency>
+
 		<!-- springboot - Redis -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
@@ -43,6 +54,11 @@
 		<dependency>
 			<groupId>org.springframework.session</groupId>
 			<artifactId>spring-session-data-redis</artifactId>
+		</dependency>
+		<!--mysql-->
+		<dependency>
+			<groupId>mysql</groupId>
+			<artifactId>mysql-connector-java</artifactId>
 		</dependency>
 
 		<dependency>
@@ -56,6 +72,11 @@
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
+		<!--AOP-->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-aop</artifactId>
+		</dependency>
 	</dependencies>
 
 	<build>
@@ -67,5 +88,15 @@
 		</plugins>
 	</build>
 
+	<repositories>
+		<repository>
+			<!-- id必须唯一 -->
+			<id>aliyun-repository</id>
+			<!-- 见名知意即可 -->
+			<name>aliyun repository</name>
+			<!-- 仓库的url地址 -->
+			<url>http://maven.aliyun.com/nexus/content/groups/public/</url>
+		</repository>
+	</repositories>
 
 </project>

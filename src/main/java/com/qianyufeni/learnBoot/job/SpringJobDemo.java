@@ -1,5 +1,7 @@
 package com.qianyufeni.learnBoot.job;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Component;
 
@@ -8,11 +10,10 @@ import org.springframework.stereotype.Component;
  */
 @Component
 public class SpringJobDemo {
-    /**
-     * 每2秒执行一次,适用于简单定时任务
-     */
-    //@Scheduled(cron = "*/2 * * * * ?")
+    private Logger logger = LoggerFactory.getLogger(SpringJobDemo.class);
+
+    @Scheduled(cron = "*/40 * * * * ?")
     public void execute(){
-        System.out.println(System.currentTimeMillis());
+
     }
 }

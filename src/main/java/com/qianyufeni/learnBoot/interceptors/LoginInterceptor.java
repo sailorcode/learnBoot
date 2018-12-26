@@ -19,15 +19,15 @@ public class LoginInterceptor extends HandlerInterceptorAdapter {
      */
     @Override
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {
-        String uri = request.getRequestURI();
+        /*String uri = request.getRequestURI();
         if(uri.indexOf("login")>=0){
             return true;
         }
         String token = request.getHeader("token");
         User user = (User)request.getSession().getAttribute(token);
-        if(null != user){
+        if(null != user){*/
             return true;
-        }
-        return false;
+       /* }
+        return false;*/
     }
 }

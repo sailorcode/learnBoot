@@ -1,6 +1,5 @@
 package com.qianyufeni.learnBoot.controller;
 
-import com.alibaba.fastjson.JSON;
 import com.qianyufeni.learnBoot.constant.RequestExceptionEnum;
 import com.qianyufeni.learnBoot.entity.User;
 import com.qianyufeni.learnBoot.exception.BadRequestException;

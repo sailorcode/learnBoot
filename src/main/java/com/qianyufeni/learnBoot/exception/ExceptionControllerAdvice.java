@@ -14,7 +14,7 @@ import java.util.Map;
 @ControllerAdvice("com.qianyufeni.learnBoot.controller")
 public class ExceptionControllerAdvice extends ResponseEntityExceptionHandler {
 
-    @ExceptionHandler(RuntimeException.class)
+    @ExceptionHandler(Exception.class)
     @ResponseBody
     ResponseEntity<?> handleControllerException(HttpServletRequest request, Throwable ex) {
         HttpStatus status = getStatus(request);
